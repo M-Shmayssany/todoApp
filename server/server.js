@@ -27,7 +27,7 @@ server.use(session({
     }
 }));
 server.use("/", routes.main);
-const database = "mongodb://admin:mkahms@localhost:27017/todoApp?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=false";
+const database = "mongodb+srv://mohamed:123password@cluster0.cz5k7.mongodb.net/todoApp?retryWrites=true&w=majority";
 
 const port = process.env.PORT || 8080;
 
