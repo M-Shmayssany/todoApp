@@ -1,0 +1,20 @@
+nav a {
+    border: 1px solid #000;
+    margin: 8px;
+    padding: 8px;
+    background-color: #9233ff;
+    color: #000000;
+    text-decoration: none;
+}
+nav a:hover {
+    border-bottom: 8px solid #751f1f;
+    background-color: #210b3a;
+    color: #dfdfdf;
+}
+nav a.active {
+    border-bottom: 8px solid #751f1f;
+    background-color: #210b3a;
+    color: #dfdfdf;
+}
+
+

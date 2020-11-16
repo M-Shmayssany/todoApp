@@ -1,0 +1,11 @@
+
+
+<h1>Landing page : {{CompanyName}}</h1>
+<h2 *ngIf="userFirstname; else elseBlock">
+    Hello {{userFirstname}}.
+</h2>
+<ng-template #elseBlock>
+    <h2>
+        Hello Guest.
+    </h2>
+</ng-template>
