@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Login } from '../login';
 import { LoginService } from '../login.service';
 import {Router} from '@angular/router';
 
@@ -13,7 +12,7 @@ export class LoginComponent implements OnInit {
   submitted = false;
   email = '';
   password = '';
-  loginModel = new Login(this.email, this.password);
+  loginModel = {email: this.email, password: this.password};
   constructor(private LoginService: LoginService,private route:Router) { }
   ngOnInit(): void {
   }
@@ -22,19 +21,19 @@ export class LoginComponent implements OnInit {
     this.LoginService.tryLogin(this.loginModel)
     .subscribe(
       data =>{
-        console.log('Success!', data);
-        sessionStorage.setItem('userFirstname', data.data.firstname);
-        sessionStorage.setItem('userLastname', data.data.lastname);
-        sessionStorage.setItem('userEmail', data.data.email);
-        
+        this.message = data.message;
+        console.log(data);
         if(data.isloggin == true){
-            this.submitted = true;
-            this.route.navigate(['/home']);
-          }else{
-            this.message = data.message;
-            this.submitted = false;
-          }
-        } ,
+          sessionStorage.setItem('userFirstname', data.data.firstname);
+          sessionStorage.setItem('userLastname', data.data.lastname);
+          sessionStorage.setItem('userEmail', data.data.email);
+          sessionStorage.setItem('userID', data.data._id);
+          this.submitted = true;
+          this.route.navigate(['/home']);
+        }else{
+          this.submitted = false;
+        }
+      } ,
         error => console.log('Error!', error)
       )
   } 
