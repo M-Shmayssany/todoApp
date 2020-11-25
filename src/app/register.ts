@@ -1,8 +1,8 @@
 export class Register {
-    constructor(
-        public firstname: string,
-        public lastname: string,
-        public email: string,
-        public password: string
-    ){}
+        constructor(
+        private firstname: string,
+        private lastname: string,
+        private email: string,
+        private password: string
+        ){}
 }

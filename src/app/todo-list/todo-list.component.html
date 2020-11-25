@@ -1,0 +1,16 @@
+
+<h1 *ngIf="(data | json) as items">{{data.title}}</h1>
+
+<ul class="items" *ngIf="list as items">
+    <li *ngFor="let item of items">
+        <span class="badge"></span>{{item.description}}-{{item.status}}-{{item.addedBy}}-{{item.addTime}}
+    </li>
+</ul>
+<ul class="items" *ngIf="group as items">
+    <li *ngFor="let item of items">
+        <span class="badge"></span>{{item.userEmail}}
+    </li>
+</ul>
+<label for="description">Description</label>
+<input type="text" name="description" [(ngModel)]='description'>
+<button (click)="addItem()">Add</button>
