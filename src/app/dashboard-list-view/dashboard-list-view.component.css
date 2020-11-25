@@ -1,0 +1,25 @@
+.items li {
+    display: flex;
+    background-color: rgba(192, 192, 192, 0.795);
+    width: 10%;
+    height: 40px;
+    align-items: center;
+    margin: 0 0 9px 0;
+    transition: all .2s ease-in-out; 
+}
+
+.items li:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.badge {
+    display: flex;
+    margin-left: 2px;
+    width: 15%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    margin-right: 5px;
+    border-radius: 7px 0 0 7px;
+}

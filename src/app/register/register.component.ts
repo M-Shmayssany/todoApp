@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Register } from '../register';
 import { EnrollmentService } from '../enrollment.service';
 
@@ -10,7 +10,7 @@ import { EnrollmentService } from '../enrollment.service';
 export class RegisterComponent implements OnInit {
   
   
-  registerModel = new Register('hussein', 'ali', 'hussein.ali@gmail.com', '123456');
+  registerModel = new Register('', '', '', '');
   submitted = false;
   constructor(private _enrollmentService: EnrollmentService) { }
   ngOnInit(): void {

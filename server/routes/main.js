@@ -20,7 +20,9 @@ const deleteUser = router.delete('/users/:id', users.userDeleteById);
 
 // TodoList Route
 const todoListGetAll = router.get('/todoList', todoList.todoListAll);
+const todoListGetById = router.get('/todoList/:id', todoList.todoListById);
 const todoListInsert = router.post('/todoList', todoList.todoListInsert);
+const todoListUpdate = router.put('/todoList/:id', todoList.todoListUpdateById);
 
 module.exports = {
     main,
@@ -33,5 +35,7 @@ module.exports = {
     usersLogin,
     // Export TodoList route
     todoListGetAll,
-    todoListInsert
+    todoListInsert,
+    todoListGetById,
+    todoListUpdate
 };
