@@ -1,9 +1,24 @@
 
 <h1 *ngIf="(data | json) as items">{{data.title}}</h1>
 
-<ul class="items" *ngIf="list as items">
+<ul class="items haut" *ngIf="list as items">
     <li *ngFor="let item of items">
-        <span class="badge"></span>{{item.description}}-{{item.status}}-{{item.addedBy}}-{{item.addTime}}
+        <div class="itemsContenair">
+          <div class="input">
+            <input type="checkbox" class="strikethrough">
+            <span>
+              {{item.description}}
+            </span>
+          </div>
+
+        <div class="itemsIcons">X</div>
+      </div>
+        <div class="itemsInfo">
+         <span class="status">to : {{item.status}}</span>
+         <span class="addeBy">from : {{item.addeBy}}</span>
+         <span class="addTime">at : {{item.addTime}}</span>
+
+        </div>
     </li>
 </ul>
 <ul class="items" *ngIf="group as items">

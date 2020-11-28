@@ -1,0 +1,42 @@
+h1{
+  background:red;
+}
+
+.items{
+  list-style:none;
+}
+
+.haut{
+  width:85%;
+  margin:auto;
+}
+
+.haut li{
+  border-bottom:1px dotted #fff;
+}
+
+.itemsContenair{
+  display:flex;
+  justify-content: space-between;
+}
+
+.haut input{
+  font-size:1.5em;
+}
+
+input[type=checkbox]:checked + span{
+  text-decoration:line-through;
+  color:#fff;
+}
+
+.itemsInfo{
+  display:flex;
+  justify-content: space-around;
+  font-size:.5em;
+  margin-top:.4em;
+  margin-bottom:.4em;
+}
+
+
+
+

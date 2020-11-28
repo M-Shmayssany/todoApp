@@ -1,5 +1,5 @@
 <p>dashboard-list-view</p>
-<button (click)="newList()">New</button>
+<button (click)="newList()" class="button butNew">New</button>
 <ul class="items" *ngIf="(data | async) as items">
 <li (click)="onSelect(item)" *ngFor="let item of items">
     <span class="badge"></span>{{item.title}}
