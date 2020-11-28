@@ -1,6 +1,16 @@
 
 <h1 *ngIf="(data | json) as items">{{data.title}}</h1>
 
+<form action="" class="formNew">
+  <div class="field">
+    <input type="text" name="description" [(ngModel)]='description' placeholder="Description">
+    <label for="description">Discription</label>
+  </div>
+  <div class="buttonCenter">
+    <button (click)="addItem()" class="button butAdd">Add</button>
+  </div>
+</form>
+
 <ul class="items haut" *ngIf="list as items">
     <li *ngFor="let item of items">
         <div class="itemsContenair">
@@ -26,6 +36,4 @@
         <span class="badge"></span>{{item.userEmail}}
     </li>
 </ul>
-<label for="description">Description</label>
-<input type="text" name="description" [(ngModel)]='description'>
-<button (click)="addItem()">Add</button>
+
