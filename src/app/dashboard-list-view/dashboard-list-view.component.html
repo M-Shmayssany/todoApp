@@ -1,7 +1,17 @@
 <p>dashboard-list-view</p>
 <button (click)="newList()">New</button>
-<ul class="items" *ngIf="(data | async) as items">
-<li (click)="onSelect(item)" *ngFor="let item of items">
-    <span class="badge"></span>{{item.title}}
-</li>
+{{message}}
+<ul class="items" *ngIf="data as items">
+    <div *ngFor="let item of items">
+        <div *ngFor="let i of item.group">
+            <div *ngIf="i.userEmail === userEmail" >
+                <li>
+                    <div (click)="onSelect(item)" class="li"> <span class="badge"></span>{{item.title}}</div>
+                    <button (click)="delete(item._id)" class="delete">Delete</button>
+                </li>
+            </div>
+        </div>
+    </div>
+<ng-template>
+</ng-template>
 </ul>

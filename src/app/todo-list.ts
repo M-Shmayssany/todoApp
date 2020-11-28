@@ -20,3 +20,7 @@ export interface Group {
         userId?: string,
         userEmail?: string
 }
+export interface Users {
+        email: string,
+        password: string
+}

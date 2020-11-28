@@ -10,7 +10,7 @@ import { TodoListAddService } from '../todo-list-add.service';
 })
 export class DashboardNewListComponent implements OnInit {
   userEmail = sessionStorage.getItem('userEmail');
-  userID = sessionStorage.getItem('userID');
+  userId = sessionStorage.getItem('userID');
   public title;
   public description;
   // public list = new List();
@@ -19,15 +19,17 @@ export class DashboardNewListComponent implements OnInit {
   constructor(private _todoListAdd: TodoListAddService ) { }
   
   ngOnInit(): void {
-    
+
   }
   addNew(){
-    const fieldModel = { title: this.title, description: this.description, group: [{ userID: this.userID, userEmail: this.userEmail}]};
+    
+    const fieldModel = { title: this.title, description: this.description, group: [{ userId: this.userId, userEmail: this.userEmail}]};
     console.log(fieldModel);
     this._todoListAdd.addNewList(fieldModel)
     .subscribe(
       data => console.log('Success!', data),
       error => console.log('Error!', error)
     );
+    location.reload()
   }
 }

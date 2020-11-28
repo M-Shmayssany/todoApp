@@ -58,20 +58,44 @@ module.exports = {
                 }
             });
         },
+
+    todoListUserUpdateById:
+        (req, res) => {
+                // A GERE UNIQUEMENT ADMIN AURA DROIT
+            const Id = req.params.id;
+            const body = req.body;
+            console.log(req.body);
+            const { description, status, addedBy, addTime } = req.body;
+            TodoList.findOne({ _id: Id },(err,data)=>{
+                if(data){
+                    data.group.push({
+                        userId: req.body.userId,
+                        userEmail: req.body.userEmail,
+                    });
+                    data.save();
+                    console.log('Group updated successfully');
+                    res.send('Group updated successfully');
+                }else if(err){
+                    console.error(err);
+                    res.send(err.message);
+                }
+            });
+        },
             
     todoListDeleteById:
         async (req, res) => {
             // A GERE UNIQUEMENT ADMIN AURA DROIT
             const todoListId = req.params.id;
-        
+
             try {
-                await TodoList.findByIdAndDelete(todoListId, (data) => data);
+                await TodoList.findByIdAndDelete(todoListId, () =>{
+                    // définir le comportement de l'app en cas de réussite
+                res.send({message: 'ok' });
                 console.log('List deleted successfully');
-                res.send('List deleted successfully');
-                // définir le comportement de l'app en cas de réussite
+                });
             } catch (err) {
-                console.log(err);
-                res.send(err.message);
+                console.log(err); 
+                //res.send(err);
                 // définir le comportement de l'app en cas d'erreur
             }
         }

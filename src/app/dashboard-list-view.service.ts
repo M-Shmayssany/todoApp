@@ -13,4 +13,8 @@ export class DashboardListViewService {
   fetchTodoList():Observable<any[]> {
     return this._http.get<any[]>(this._url);
   }
+  deleteTodolist(id):Observable<any[]> {
+    console.log(this._url + `/${id}`);
+    return this._http.delete<any[]>(this._url + `/${id}`);
+  }
 }

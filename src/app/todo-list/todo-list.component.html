@@ -1,16 +1,24 @@
 
 <h1 *ngIf="(data | json) as items">{{data.title}}</h1>
-
+<h3>Todo</h3>
 <ul class="items" *ngIf="list as items">
     <li *ngFor="let item of items">
         <span class="badge"></span>{{item.description}}-{{item.status}}-{{item.addedBy}}-{{item.addTime}}
     </li>
 </ul>
+
+<label for="description">Description</label>
+<input type="text" name="description" [(ngModel)]='description'>
+<button (click)="addItem()">Add</button>
+<div>
+<h3>Users</h3>
+    <select [(ngModel)]="user" *ngIf="allUsers as users">
+        <option *ngFor="let user of users" [class.disabled]="userEmail === user.email" value="{{user._id}},{{user.email}}">({{user.firstname}})==>{{user.email}}</option>
+    </select>
+    <button (click)="addUser()">Add</button>
+</div>
 <ul class="items" *ngIf="group as items">
     <li *ngFor="let item of items">
         <span class="badge"></span>{{item.userEmail}}
     </li>
 </ul>
-<label for="description">Description</label>
-<input type="text" name="description" [(ngModel)]='description'>
-<button (click)="addItem()">Add</button>
