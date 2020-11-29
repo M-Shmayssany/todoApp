@@ -1,6 +1,6 @@
 **<div align="center"> WORK-SHOP <br> [ToDo-List]()</div>** 
 <div align="center">
-<img src="./IMG/angular.png" height=200> </div>
+<img src="./src/assets/img/angular.png" height=200> </div>
 
 **<div align="center"> ANGULAR 10.2.0 </div>**
 
