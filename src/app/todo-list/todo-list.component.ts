@@ -15,6 +15,12 @@ export class TodoListComponent implements OnInit {
   public list;
   public newList;
   public group;
+  public newGroup;
+  public allUsers;
+  public user;
+  public userArray;
+  
+  public userEmail = sessionStorage.getItem('userEmail');
   
   constructor(private route: ActivatedRoute, private _todoListService: TodoListService) { }
 
@@ -26,7 +32,10 @@ export class TodoListComponent implements OnInit {
       this.data = data;
       this.list = this.data.list;
       this.group = this.data.group;
-    });;
+    });
+    this._todoListService.fitchUsers().subscribe((data) => {
+      this.allUsers = data;
+    });
   }
   addItem(){
     this.list.push({description: this.description,status: 0, addedBy: sessionStorage.getItem('userEmail'), addTime: new Date() });
@@ -35,5 +44,23 @@ export class TodoListComponent implements OnInit {
       this.data = data;
     },
     error => console.log(error));
+    this.description = '';
   }
+  addUser(){
+    this.userArray = this.user.split(',');
+    console.log(this.userArray[0]);
+    this.group.push({
+      userId: this.userArray[0],
+      userEmail: this.userArray[1]
+    });
+    this.newGroup = {
+      userId: this.userArray[0],
+      userEmail: this.userArray[1]
+    };
+    this._todoListService.updateGroupItem(this.todoListId, this.newGroup).subscribe(data => {
+      this.data = data;
+    },
+    error => console.log(error));
+  }
+
 }

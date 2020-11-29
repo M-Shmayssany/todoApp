@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
           sessionStorage.setItem('userEmail', data.data.email);
           sessionStorage.setItem('userID', data.data._id);
           this.submitted = true;
+          console.log(sessionStorage.getItem('userEmail'));
           this.route.navigate(['/home']);
         }else{
           this.submitted = false;

@@ -23,6 +23,8 @@ const todoListGetAll = router.get('/todoList', todoList.todoListAll);
 const todoListGetById = router.get('/todoList/:id', todoList.todoListById);
 const todoListInsert = router.post('/todoList', todoList.todoListInsert);
 const todoListUpdate = router.put('/todoList/:id', todoList.todoListUpdateById);
+const todoListUsersUpdate = router.put('/todoListUsers/:id', todoList.todoListUserUpdateById);
+const todoListDelete = router.delete('/todoList/:id', todoList.todoListDeleteById);
 
 module.exports = {
     main,
@@ -37,5 +39,7 @@ module.exports = {
     todoListGetAll,
     todoListInsert,
     todoListGetById,
-    todoListUpdate
+    todoListUpdate,
+    todoListDelete,
+    todoListUsersUpdate
 };
