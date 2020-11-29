@@ -1,27 +1,54 @@
-# TodoApp
+**<div align="center"> WORK-SHOP <br> [ToDo-List]()</div>** 
+<div align="center">
+<img src="./IMG/angular.png" height=200> </div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+**<div align="center"> ANGULAR 10.2.0 </div>**
 
-## Development server
+### Prérequis
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+    1. HTML,CSS,JavaScript
+    2. Une base en type-script
 
-## Code scaffolding
+### Installations requises 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    1. Node
+    2. npm
+    3. Angular CLI
+    4. Éditeur de texte
 
-## Build
+### Déroulement de la présentation
+       
+    I. Introduction:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+        1. Présentation du sujet du Work-shop
+        2. Qu’est ce que Angular  
+        3. Histoire d’Angular
+        4. installation (Angular 10.2)
+        5. Hello World (structure des fichiers dans l’éditeur de texte)
+        6. Architecture des modules & Composants
 
-## Running unit tests
+    II. Développement d'une application "TodoList"
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+        1. Display
+        2. Input
+        3. Bouton 
+        4. Checkbox
+        5. Branchement conditionnel (ngIf)
+        6. Boucle(ngFor)
+        7. Bouton (Clic)
+           
+       
+    III. Conclusion
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+        1. Résumé de la présentation 
+        2. Projet réalisé en Angular 
+        3. Projet à venir
+### Liens back-Up : 
+[Step 1]()
+[Step 2]()
+[Step 3]()
+### Réalisé par : 
+[Limage Aurore](),
+[Weets Piérre](), 
+[Shmayssany Mohamed](),
+[Ndizeye Albert](),
