@@ -5,20 +5,20 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { LogoutComponent } from './logout/logout.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { AboutComponent } from './about/about.component';
-import { DashboardNewListComponent } from './dashboard-new-list/dashboard-new-list.component';
-import { DashboardListViewComponent } from './dashboard-list-view/dashboard-list-view.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
-import { TodoListService } from './todo-list.service';
-import { TodoListAddService } from './todo-list-add.service';
-import { LoginService } from './login.service';
-import { EnrollmentService } from './enrollment.service';
-import { DashboardListViewService } from './dashboard-list-view.service';
+import { RegisterComponent } from './pages/register/register.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { LogoutComponent } from './pages/logout/logout.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AboutComponent } from './pages/about/about.component';
+import { DashboardNewListComponent } from './pages/dashboard-new-list/dashboard-new-list.component';
+import { DashboardListViewComponent } from './pages/dashboard-list-view/dashboard-list-view.component';
+import { TodoListComponent } from './pages/todo-list/todo-list.component';
+import { TodoListService } from './services/todo-list.service';
+import { TodoListAddService } from './services/todo-list-add.service';
+import { LoginService } from './services/login.service';
+import { EnrollmentService } from './services/enrollment.service';
+import { DashboardListViewService } from './services/dashboard-list-view.service';
 
 @NgModule({
   declarations: [

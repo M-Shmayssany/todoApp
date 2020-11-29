@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { DashboardListViewComponent } from './dashboard-list-view/dashboard-list-view.component';
-import { DashboardNewListComponent } from './dashboard-new-list/dashboard-new-list.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { LogoutComponent } from './logout/logout.component';
-import { RegisterComponent } from './register/register.component';
+import { AboutComponent } from './pages/about/about.component';
+import { DashboardListViewComponent } from './pages/dashboard-list-view/dashboard-list-view.component';
+import { DashboardNewListComponent } from './pages/dashboard-new-list/dashboard-new-list.component';
+import { TodoListComponent } from './pages/todo-list/todo-list.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { LogoutComponent } from './pages/logout/logout.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
