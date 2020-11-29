@@ -35,5 +35,6 @@ export class TodoListComponent implements OnInit {
       this.data = data;
     },
     error => console.log(error));
+    this.description = '';
   }
 }
