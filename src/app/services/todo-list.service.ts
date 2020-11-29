@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { TodoList, Users } from './todo-list';
+import { TodoList, Users } from '../model/todo-list';
 import { Observable } from 'rxjs';
 
 @Injectable({

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   public userFirstname = sessionStorage.getItem('userFirstname');
-  public CompanyName = 'mTech-solution.com';
+  public CompanyName = 'Becode.org';
   
   constructor() { }
   ngOnInit(): void {

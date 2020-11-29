@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
-import { DashboardListViewService } from '../dashboard-list-view.service';
+import { DashboardListViewService } from '../../services/dashboard-list-view.service';
 
 
 @Component({
