@@ -34,9 +34,6 @@
     </li>
 </ul>
 
-<label for="description">Description</label>
-<input type="text" name="description" [(ngModel)]='description'>
-<button (click)="addItem()">Add</button>
 <div>
 <h3>Users</h3>
     <select [(ngModel)]="user" *ngIf="allUsers as users">
