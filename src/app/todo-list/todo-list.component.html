@@ -1,9 +1,36 @@
 
 <h1 *ngIf="(data | json) as items">{{data.title}}</h1>
+
+<form action="" class="formNew">
+  <div class="field">
+    <input type="text" name="description" [(ngModel)]='description' placeholder="Description">
+    <label for="description">Discription</label>
+  </div>
+  <div class="buttonCenter">
+    <button (click)="addItem()" class="button butAdd">Add</button>
+  </div>
+</form>
+
+<ul class="items haut" *ngIf="list as items">
 <h3>Todo</h3>
 <ul class="items" *ngIf="list as items">
     <li *ngFor="let item of items">
-        <span class="badge"></span>{{item.description}}-{{item.status}}-{{item.addedBy}}-{{item.addTime}}
+        <div class="itemsContenair">
+          <div class="input">
+            <input type="checkbox" class="strikethrough">
+            <span>
+              {{item.description}}
+            </span>
+          </div>
+
+        <div class="itemsIcons">X</div>
+      </div>
+        <div class="itemsInfo">
+         <span class="status">to : {{item.status}}</span>
+         <span class="addeBy">from : {{item.addeBy}}</span>
+         <span class="addTime">at : {{item.addTime}}</span>
+
+        </div>
     </li>
 </ul>
 
@@ -22,3 +49,4 @@
         <span class="badge"></span>{{item.userEmail}}
     </li>
 </ul>
+
