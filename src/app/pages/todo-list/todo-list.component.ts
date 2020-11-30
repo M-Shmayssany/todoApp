@@ -19,9 +19,10 @@ export class TodoListComponent implements OnInit {
   public allUsers;
   public user;
   public userArray;
-  
+
   public userEmail = sessionStorage.getItem('userEmail');
-  
+  public isChecked = false;
+
   constructor(private route: ActivatedRoute, private _todoListService: TodoListService) { }
 
   ngOnInit(): void {

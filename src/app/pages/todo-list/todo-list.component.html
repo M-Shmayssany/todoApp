@@ -17,10 +17,8 @@
     <li *ngFor="let item of items">
         <div class="itemsContenair">
           <div class="input">
-            <input type="checkbox" class="strikethrough">
-            <span>
-              {{item.description}}
-            </span>
+            <input type="checkbox" [checked]="isChecked">
+              <span>{{item.description}}</span>
           </div>
 
         <div class="itemsIcons">X</div>
