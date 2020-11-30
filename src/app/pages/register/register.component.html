@@ -5,7 +5,7 @@
         <label for="firstname"  >First name</label>
         <input name="firstname" required #name="ngModel" [(class.invaled)]="name.invalid && name.touched" class="form-control" type="text" [(ngModel)]="registerModel.firstname"/>
     </div>
-    {{name.valid}}
+    
     <div>
         <label for="lastname">Last name</label>
         <input name="lastname" type="text" [(ngModel)]="registerModel.lastname"/>
