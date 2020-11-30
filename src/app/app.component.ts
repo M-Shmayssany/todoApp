@@ -8,7 +8,7 @@ import {Router, NavigationEnd} from "@angular/router";
 })
 export class AppComponent {
   title = 'todoApp';
-  userFirstname;
+  public userFirstname;
     constructor(private activeRoute:Router) { }
   ngOnInit(): void {
     this.activeRoute.events.subscribe(this.onUrlChange.bind(this))
