@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {Router, NavigationEnd} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -8,20 +7,4 @@ import {Router, NavigationEnd} from "@angular/router";
 })
 export class AppComponent {
   title = 'todoApp';
-  userFirstname;
-    constructor(private activeRoute:Router) { }
-  ngOnInit(): void {
-    this.activeRoute.events.subscribe(this.onUrlChange.bind(this))
-  }
-  onUrlChange(ev) {
-    if(ev instanceof NavigationEnd) {
-      if(sessionStorage.getItem('userFirstname'))  {
-          this.userFirstname = sessionStorage.getItem('userFirstname');
-      } else {
-        this.userFirstname = "";
-      }
-
-    }
-  }
-  
 }
