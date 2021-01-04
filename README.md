@@ -43,12 +43,4 @@
         1. Résumé de la présentation 
         2. Projet réalisé en Angular 
         3. Projet à venir
-### Liens back-Up : 
-[Step 1]()
-[Step 2]()
-[Step 3]()
-### Réalisé par : 
-[Limage Aurore](),
-[Weets Piérre](), 
-[Shmayssany Mohamed](),
-[Ndizeye Albert](),
+
